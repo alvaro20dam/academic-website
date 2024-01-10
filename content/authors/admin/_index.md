@@ -1,13 +1,13 @@
 ---
-bio: My research interests include distributed robotics, mobile computing and programmable
+bio: My research interests include & distributed robotics, mobile computing and programmable
   matter.
 education:
   courses:
   - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
+    institution: Carabobo University
+    year: 2016
   - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
+    institution: Carabobo Institute of Technology
     year: 2009
   - course: BSc in Artificial Intelligence
     institution: Massachusetts Institute of Technology
@@ -15,7 +15,7 @@ education:
 first_name: Shiung Wu
 highlight_name: true
 interests:
-- Artificial Intelligence
+- Artificial Intelligence of natural
 - Computational Linguistics
 - Information Retrieval
 last_name: Chien
@@ -40,7 +40,7 @@ skills:
     icon: database
     icon_pack: fas
     name: SQL
-    percent: 40
+    percent: 70
   name: Technical
 - color: '#eeac02'
   color_border: '#f0bf23'
@@ -89,5 +89,5 @@ superuser: true
 title: 吳健雄
 ---
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Chien Shiung Wu is a professor (of artificial intelligence) at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
 {style="text-align: justify;"}

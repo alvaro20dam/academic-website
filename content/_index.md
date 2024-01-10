@@ -202,7 +202,7 @@ sections:
 - block: contact
   content:
     address:
-      city: Stanford
+      city: Naguanagua
       country: United States
       country_code: US
       postcode: "94305"
@@ -237,7 +237,7 @@ sections:
     office_hours:
     - Monday 10:00 to 13:00
     - Wednesday 09:00 to 10:00
-    phone: 888 888 88 88
+    phone: 555 55 55
     subtitle: null
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mi diam, venenatis
       ut magna et, vehicula efficitur enim.
