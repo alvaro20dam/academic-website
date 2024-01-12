@@ -60,7 +60,7 @@ sections:
       description: |2-
           Responsibilities include:
 
-          * Analysing
+          * Analysing it!
           * Modelling
           * Deploying
       location: California
@@ -71,7 +71,7 @@ sections:
       date_end: "2020-12-31"
       date_start: "2016-01-01"
       description: Taught electronic engineering and researched semiconductor physics.
-      location: California
+      location: Carabobo
       title: Professor of Semiconductor Physics
     title: Experience
   design:
@@ -87,7 +87,7 @@ sections:
       icon: coursera
       organization: Coursera
       organization_url: https://www.coursera.org
-      title: Neural Networks and Deep Learning
+      title: Neural Networks and Deep Learning dudes!
       url: ""
     - certificate_url: https://www.edx.org
       date_end: ""
@@ -96,7 +96,7 @@ sections:
       icon: edx
       organization: edX
       organization_url: https://www.edx.org
-      title: Blockchain Fundamentals
+      title: Blockchain not so Fundamentals
       url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
     - certificate_url: https://www.datacamp.com
       date_end: "2020-12-21"
@@ -105,7 +105,7 @@ sections:
       icon: datacamp
       organization: DataCamp
       organization_url: https://www.datacamp.com
-      title: Object-Oriented Programming in R
+      title: Object-Oriented Programming in we R
       url: ""
     subtitle: null
     title: Accomplish&shy;ments
