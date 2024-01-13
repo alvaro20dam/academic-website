@@ -12,18 +12,18 @@ education:
   - course: BSc in Artificial Intelligence
     institution: Massachusetts Institute of Technology
     year: 2008
-first_name: Shiung Wu
+first_name: Alvaro
 highlight_name: true
 interests:
 - Artificial Intelligence of natural
 - Computational Linguistics
 - Information Retrieval
-last_name: Chien
-name_pronunciation: Chien Shiung Wu
+last_name: Gonzalez
+name_pronunciation: Alvaro Gonzalez
 organizations:
-- name: Stanford University
+- name: Universidad de Carabobo
   url: https://www.stanford.edu/
-role: Professor of Artificial Intelligence
+role: Professor of Artificial Ignorance
 skills:
 - items:
   - description: ""
@@ -70,16 +70,16 @@ social:
   icon: twitter
   icon_pack: fab
   label: Follow me on Twitter
-  link: https://twitter.com/GeorgeCushen
+  link: https://twitter.com/alvarogonz
 - icon: graduation-cap
   icon_pack: fas
   link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/alvaro20dam
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/
+  link: https://www.linkedin.com/in/alvaro20dam/
 - icon: cv
   icon_pack: ai
   link: uploads/resume.pdf
