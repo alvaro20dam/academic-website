@@ -3,27 +3,27 @@ bio: My research interests include & distributed, computing and programmable
   matter.
 education:
   courses:
-  - course: PhD in Artificial Ignorance
+  - course: Economics Degree
     institution: Carabobo University
     year: 2007
-  - course: MEng in Natural Intelligence
+  - course: Google Data Analyst
     institution: Carabobo Institute of Technology
-    year: 2006
-  - course: BSc in Natural Ignorance
+    year: 2017
+  - course: Data Science, R specialization
     institution: Massachusetts Institute of Technology
-    year: 2005
+    year: 2020
 first_name: Alvaro
 highlight_name: true
 interests:
-- Artificial Intelligence of natural
-- Computational Linguistics
-- Information Retrieval
+- Finding patterns and trends in data sets
+- Algorithms and predictive models
+- Machine learning techniques
 last_name: Gonzalez
 name_pronunciation: Alvaro Gonzalez
 organizations:
 - name: Universidad de Carabobo
   url: https://www.stanford.edu/
-role: Professor of Artificial Ignorance
+role: Economist
 skills:
 - items:
   - description: ""
@@ -109,5 +109,14 @@ superuser: true
 title: 吳健雄
 ---
 
-Alvaro Gonzalez is a professor (of artificial ignorance) at the Standard AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Economist with a strong background in data science and a
+passion for solving real-world problems. I have extensive
+experience conducting economic research, collecting, and
+analyzing data, and developing and testing mathematical
+models. I have applied my skills to various domains, such as
+banking, finance, public policy, and consulting. I am proficient
+in using statistical software, such as R, Python, and Stata, and
+data visualization tools like Tableau and Power BI. I am always
+eager to learn new techniques and methods to enhance my
+analytical abilities and deliver high-quality results
 {style="text-align: justify;"}
