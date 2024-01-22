@@ -52,27 +52,27 @@ sections:
   content:
     date_format: Jan 2006
     items:
-    - company: GenCoin
+    - company: GroTool, LLC
       company_logo: org-gc
       company_url: ""
       date_end: ""
-      date_start: "2021-01-01"
+      date_start: "2020-01-01"
       description: |2-
           Responsibilities include:
 
-          * Analysing it!
+          * Analysing
           * Modelling
           * Deploying
-      location: California
-      title: CEO
-    - company: University X
+      location: Florida
+      title: Database Manager
+    - company: Banco Central de Venezuela
       company_logo: org-x
       company_url: ""
-      date_end: "2020-12-31"
-      date_start: "2016-01-01"
-      description: Taught electronic engineering and researched semiconductor physics.
-      location: Carabobo
-      title: Professor of Semiconductor Physics
+      date_end: "2010-12-31"
+      date_start: "2008-01-01"
+      description: Monetary reconversion of 2009.
+      location: Caracas/Venezuela
+      title: Economista I
     title: Experience
   design:
     columns: "2"
@@ -87,7 +87,7 @@ sections:
       icon: coursera
       organization: Coursera
       organization_url: https://www.coursera.org
-      title: Neural Networks and Deep Learning dudes!
+      title: Google Data Analytics Professional Certificate
       url: ""
     - certificate_url: https://www.edx.org
       date_end: ""
@@ -105,7 +105,7 @@ sections:
       icon: datacamp
       organization: DataCamp
       organization_url: https://www.datacamp.com
-      title: Object-Oriented Programming in we R
+      title: Object-Oriented Programming in R
       url: ""
     subtitle: null
     title: Accomplish&shy;ments
