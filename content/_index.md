@@ -53,8 +53,8 @@ sections:
     date_format: Jan 2006
     items:
     - company: GroTool, LLC
-      company_logo: org-gc
-      company_url: ""
+      company_logo: grotool
+      company_url: "https://www.grotool.com/"
       date_end: ""
       date_start: "2020-01-01"
       description: |2-
@@ -65,14 +65,22 @@ sections:
           * Deploying
       location: Florida
       title: Database Manager
+    - company: Comunicaciones Fintech
+      company_logo: fintech
+      company_url: ""
+      date_end: "2020-12-31"
+      date_start: "2017-01-01"
+      description: Crypto Assets Manager
+      location: Caracas/Venezuela
+      title: Financial Advisor
     - company: Banco Central de Venezuela
-      company_logo: org-x
+      company_logo: bank
       company_url: ""
       date_end: "2010-12-31"
       date_start: "2008-01-01"
       description: Monetary reconversion of 2009.
       location: Caracas/Venezuela
-      title: Economista I
+      title: Economista I  
     title: Experience
   design:
     columns: "2"
@@ -105,7 +113,7 @@ sections:
       icon: datacamp
       organization: DataCamp
       organization_url: https://www.datacamp.com
-      title: Object-Oriented Programming in R
+      title: Programming in R
       url: ""
     subtitle: null
     title: Accomplish&shy;ments
