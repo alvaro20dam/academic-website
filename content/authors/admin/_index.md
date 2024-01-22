@@ -30,7 +30,7 @@ skills:
     icon: python
     icon_pack: fab
     name: Python
-    percent: 80
+    percent: 70
   - description: ""
     icon: chart-line
     icon_pack: fas
@@ -41,24 +41,44 @@ skills:
     icon_pack: fas
     name: SQL
     percent: 70
+  - description: ""
+    icon: chart-simple
+    icon_pack: fas
+    name: SQL
+    percent: 70
+  - description: ""
+    icon: r
+    icon_pack: fas
+    name: R
+    percent: 70
   name: Technical
 - color: '#eeac02'
   color_border: '#f0bf23'
   items:
   - description: ""
-    icon: person
+    icon: futbol
     icon_pack: fas
-    name: Hiking
-    percent: 60
-  - description: ""
-    icon: cat
-    icon_pack: fas
-    name: Cats
+    name: Play
     percent: 100
   - description: ""
-    icon: camera-retro
+    icon: guitar
     icon_pack: fas
-    name: Photography
+    name: Grunge
+    percent: 100    
+  - description: ""
+    icon: biking
+    icon_pack: fas
+    name: Ride
+    percent: 100  
+  - description: ""
+    icon: dog
+    icon_pack: fas
+    name: Dogs
+    percent: 100
+  - description: ""
+    icon: book
+    icon_pack: fas
+    name: Reading
     percent: 80
   name: Hobbies
 social:
