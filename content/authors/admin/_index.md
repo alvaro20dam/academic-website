@@ -1,17 +1,17 @@
 ---
-bio: My research interests include & distributed robotics, mobile computing and programmable
+bio: My research interests include & distributed, computing and programmable
   matter.
 education:
   courses:
-  - course: PhD in Artificial Intelligence
+  - course: PhD in Artificial Ignorance
     institution: Carabobo University
-    year: 2016
-  - course: MEng in Artificial Intelligence
+    year: 2007
+  - course: MEng in Natural Intelligence
     institution: Carabobo Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
+    year: 2006
+  - course: BSc in Natural Ignorance
     institution: Massachusetts Institute of Technology
-    year: 2008
+    year: 2005
 first_name: Alvaro
 highlight_name: true
 interests:
@@ -35,7 +35,7 @@ skills:
     icon: chart-line
     icon_pack: fas
     name: Data Science
-    percent: 100
+    percent: 90
   - description: ""
     icon: database
     icon_pack: fas
@@ -46,7 +46,7 @@ skills:
   color_border: '#f0bf23'
   items:
   - description: ""
-    icon: person-hiking
+    icon: person
     icon_pack: fas
     name: Hiking
     percent: 60
@@ -89,5 +89,5 @@ superuser: true
 title: 吳健雄
 ---
 
-Chien Shiung Wu is a professor (of artificial intelligence) at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Alvaro Gonzalez is a professor (of artificial ignorance) at the Standard AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
 {style="text-align: justify;"}
