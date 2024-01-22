@@ -40,17 +40,17 @@ skills:
     icon: database
     icon_pack: fas
     name: SQL
-    percent: 70
+    percent: 80
   - description: ""
     icon: chart-simple
     icon_pack: fas
-    name: SQL
-    percent: 70
+    name: Tableau
+    percent: 80
   - description: ""
     icon: r
     icon_pack: fas
     name: R
-    percent: 70
+    percent: 85
   name: Technical
 - color: '#eeac02'
   color_border: '#f0bf23'
@@ -64,17 +64,17 @@ skills:
     icon: guitar
     icon_pack: fas
     name: Grunge
-    percent: 100    
+    percent: 80    
   - description: ""
     icon: biking
     icon_pack: fas
     name: Ride
-    percent: 100  
+    percent: 95  
   - description: ""
     icon: dog
     icon_pack: fas
     name: Dogs
-    percent: 100
+    percent: 70
   - description: ""
     icon: book
     icon_pack: fas

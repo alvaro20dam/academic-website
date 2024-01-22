@@ -208,12 +208,12 @@ sections:
       postcode: "94305"
       region: CA
       street: 450 Serra Mall
-    appointment_url: https://calendly.com
+    appointment_url: https://calendly.com/alvaro_gonzalez_
     autolink: true
     contact_links:
     - icon: twitter
       icon_pack: fab
-      link: https://twitter.com/Twitter
+      link: https://twitter.com/alvarogonz
       name: DM Me
     - icon: skype
       icon_pack: fab
@@ -224,22 +224,22 @@ sections:
       link: https://zoom.com
       name: Zoom Me
     coordinates:
-      latitude: "37.4275"
-      longitude: "-122.1697"
-    directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
+      latitude: "10.266107297676179"
+      longitude: "-68.01157728222454"
+    directions: Enter Building 7 and take the stairs to Apt 1-3 on Floor 2
     email: test@example.org
     form:
       formspree:
         id: null
       netlify:
-        captcha: false
+        captcha: 
       provider: netlify
     office_hours:
-    - Monday 10:00 to 13:00
-    - Wednesday 09:00 to 10:00
+    - Monday Todo el dia
+    - Wednesday 09:00 to 16
     phone: 555 55 55
     subtitle: null
-    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mi diam, venenatis
+    text: Si quieres contactarme, consectetur adipiscing elit. Nam mi diam, venenatis
       ut magna et, vehicula efficitur enim.
     title: Contact
   design:
