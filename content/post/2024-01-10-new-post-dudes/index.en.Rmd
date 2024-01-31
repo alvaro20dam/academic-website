@@ -1,5 +1,5 @@
 ---
-title: New post dudes!
+title: Accidents analysis
 author: Alvaro
 date: '2024-01-10'
 slug: new-post-dudes
@@ -18,3 +18,71 @@ image:
   preview_only: no
 projects: []
 ---
+
+## The data
+
+We’re going to explore data from the National Electronic Injury Surveillance System (NEISS), collected by the Consumer Product Safety Commission.
+
+It’s an interesting dataset to explore because every one is already familiar with the domain, and each observation is accompanied by a short narrative that explains how the accident occurred.
+
+```{r load data, message=FALSE}
+library(tidyverse)
+
+```
+
+```{r injuries, message=FALSE}
+injuries <- read_tsv("C:/Users/admin/Desktop/R/R-todo/ER_injuries/neiss/injuries.tsv")
+spec(injuries)
+
+
+```
+
+```{r products, message=FALSE}
+products <- read_tsv("C:/Users/admin/Desktop/R/R-todo/ER_injuries/neiss/injuries.tsv")
+spec(products)
+
+```
+
+```{r pop, message=FALSE}
+population <- read_tsv("C:/Users/admin/Desktop/R/R-todo/ER_injuries/neiss/injuries.tsv")
+spec(population)
+```
+
+## Exploration 
+
+We’ll start by looking at a product with an interesting story: 649, “toilets”. First, we’ll pull out the injuries associated with this product:
+
+```{r}
+selected <- injuries %>% filter(prod_code == 649)
+nrow(selected)
+
+```
+
+Next, we’ll perform some basic summaries looking at the location, body part, and diagnosis of toilet-related injuries.
+
+```{r}
+selected %>% count(location, wt = weight, sort = TRUE)
+```
+
+```{r}
+selected %>% count(body_part, wt = weight, sort = TRUE)
+```
+
+```{r}
+selected %>% count(diag, wt = weight, sort = TRUE)
+```
+
+As you might expect, injuries involving toilets most often occur at home. The most common body parts involved possibly suggest that these are falls (since the head and face are not usually involved in routine toilet usage), and the diagnoses seem rather varied.
+
+We can also explore the pattern across age and sex. We have enough data here that a table is not that useful, and so I make a plot, Fig..., that makes the patterns more obvious.
+
+```{r}
+summary <- selected %>% 
+  count(age, sex, wt = weight)
+summary
+
+summary %>% 
+  ggplot(aes(age, n, colour = sex)) + 
+  geom_line() + 
+  labs(y = "Estimated number of injuries")
+```
