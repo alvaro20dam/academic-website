@@ -53,43 +53,28 @@ spec(injuries)
 
 
 ```r
-products <- read_tsv("C:/Users/admin/Desktop/R/R-todo/ER_injuries/neiss/injuries.tsv")
+products <- read_tsv("C:/Users/admin/Desktop/R/R-todo/ER_injuries/neiss/products.tsv")
 spec(products)
 ```
 
 ```
 ## cols(
-##   trmt_date = col_date(format = ""),
-##   age = col_double(),
-##   sex = col_character(),
-##   race = col_character(),
-##   body_part = col_character(),
-##   diag = col_character(),
-##   location = col_character(),
 ##   prod_code = col_double(),
-##   weight = col_double(),
-##   narrative = col_character()
+##   title = col_character()
 ## )
 ```
 
 
 ```r
-population <- read_tsv("C:/Users/admin/Desktop/R/R-todo/ER_injuries/neiss/injuries.tsv")
+population <- read_tsv("C:/Users/admin/Desktop/R/R-todo/ER_injuries/neiss/population.tsv")
 spec(population)
 ```
 
 ```
 ## cols(
-##   trmt_date = col_date(format = ""),
 ##   age = col_double(),
 ##   sex = col_character(),
-##   race = col_character(),
-##   body_part = col_character(),
-##   diag = col_character(),
-##   location = col_character(),
-##   prod_code = col_double(),
-##   weight = col_double(),
-##   narrative = col_character()
+##   population = col_double()
 ## )
 ```
 
@@ -215,3 +200,44 @@ summary %>%
 ```
 
 <img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-5-1.png" width="672" />
+
+We see a spike for young boys peaking at age 3, and then an increase (particularly for women) starting around middle age, and a gradual decline after age 80.
+
+One problem with interpreting this pattern is that we know that there are fewer older people than younger people, so the population available to be injured is smaller. We can control for this by comparing the number of people injured with the total population and calculating an injury rate. Here I use a rate per 10,000.
+
+
+```r
+summary <- selected %>% 
+  count(age, sex, wt = weight) %>% 
+  left_join(population, by = c("age", "sex")) %>% 
+  mutate(rate = n / population * 1e4)
+
+summary
+```
+
+```
+## # A tibble: 208 × 5
+##      age sex          n population   rate
+##    <dbl> <chr>    <dbl>      <dbl>  <dbl>
+##  1     0 female    4.76    1924145 0.0247
+##  2     0 male     14.3     2015150 0.0708
+##  3     1 female  253.      1943534 1.30  
+##  4     1 male    231.      2031718 1.14  
+##  5     2 female  438.      1965150 2.23  
+##  6     2 male    632.      2056625 3.07  
+##  7     3 female  381.      1956281 1.95  
+##  8     3 male   1004.      2050474 4.90  
+##  9     4 female  261.      1953782 1.33  
+## 10     4 male    843.      2042001 4.13  
+## # ℹ 198 more rows
+```
+
+
+```r
+summary %>% 
+  ggplot(aes(age, rate, colour = sex)) + 
+  geom_line(na.rm = TRUE) + 
+  labs(y = "Injuries per 10,000 people")
+```
+
+<img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-7-1.png" width="672" />

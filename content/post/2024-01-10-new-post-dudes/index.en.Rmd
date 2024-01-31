@@ -38,13 +38,13 @@ spec(injuries)
 ```
 
 ```{r products, message=FALSE}
-products <- read_tsv("C:/Users/admin/Desktop/R/R-todo/ER_injuries/neiss/injuries.tsv")
+products <- read_tsv("C:/Users/admin/Desktop/R/R-todo/ER_injuries/neiss/products.tsv")
 spec(products)
 
 ```
 
 ```{r pop, message=FALSE}
-population <- read_tsv("C:/Users/admin/Desktop/R/R-todo/ER_injuries/neiss/injuries.tsv")
+population <- read_tsv("C:/Users/admin/Desktop/R/R-todo/ER_injuries/neiss/population.tsv")
 spec(population)
 ```
 
@@ -85,4 +85,26 @@ summary %>%
   ggplot(aes(age, n, colour = sex)) + 
   geom_line() + 
   labs(y = "Estimated number of injuries")
+```
+
+We see a spike for young boys peaking at age 3, and then an increase (particularly for women) starting around middle age, and a gradual decline after age 80.
+
+One problem with interpreting this pattern is that we know that there are fewer older people than younger people, so the population available to be injured is smaller. We can control for this by comparing the number of people injured with the total population and calculating an injury rate. Here I use a rate per 10,000.
+
+```{r}
+summary <- selected %>% 
+  count(age, sex, wt = weight) %>% 
+  left_join(population, by = c("age", "sex")) %>% 
+  mutate(rate = n / population * 1e4)
+
+summary
+
+
+```
+
+```{r}
+summary %>% 
+  ggplot(aes(age, rate, colour = sex)) + 
+  geom_line(na.rm = TRUE) + 
+  labs(y = "Injuries per 10,000 people")
 ```
