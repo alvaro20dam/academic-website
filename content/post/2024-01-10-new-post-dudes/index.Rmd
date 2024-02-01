@@ -7,17 +7,19 @@ categories:
   - R
 tags:
   - plot
-subtitle: ''
-summary: ''
-authors: []
+subtitle: 
+summary:
+  authors: [Alexander Acosta]
 lastmod: '2024-01-10T16:07:43-04:00'
-featured: no
+featured: false
 image:
   caption: ''
   focal_point: ''
   preview_only: no
 projects: []
 ---
+
+![](fotoPilar3.jpg)
 
 ## The data
 
@@ -48,7 +50,7 @@ population <- read_tsv("C:/Users/admin/Desktop/R/R-todo/ER_injuries/neiss/popula
 spec(population)
 ```
 
-## Exploration 
+## Exploration
 
 We’ll start by looking at a product with an interesting story: 649, “toilets”. First, we’ll pull out the injuries associated with this product:
 

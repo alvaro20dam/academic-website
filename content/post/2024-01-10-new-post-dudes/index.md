@@ -7,17 +7,19 @@ categories:
   - R
 tags:
   - plot
-subtitle: ''
-summary: ''
-authors: []
+subtitle: 
+summary:
+  authors: [Alexander Acosta]
 lastmod: '2024-01-10T16:07:43-04:00'
-featured: no
+featured: false
 image:
   caption: ''
   focal_point: ''
   preview_only: no
 projects: []
 ---
+
+![](fotoPilar3.jpg)
 
 ## The data
 
@@ -78,7 +80,7 @@ spec(population)
 ## )
 ```
 
-## Exploration 
+## Exploration
 
 We’ll start by looking at a product with an interesting story: 649, “toilets”. First, we’ll pull out the injuries associated with this product:
 
@@ -199,7 +201,7 @@ summary %>%
   labs(y = "Estimated number of injuries")
 ```
 
-<img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-5-1.png" width="672" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-1.png" width="672" />
 
 We see a spike for young boys peaking at age 3, and then an increase (particularly for women) starting around middle age, and a gradual decline after age 80.
 
@@ -240,4 +242,4 @@ summary %>%
   labs(y = "Injuries per 10,000 people")
 ```
 
-<img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-1.png" width="672" />
