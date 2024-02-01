@@ -7,7 +7,7 @@ categories:
   - R
 tags:
   - plot
-subtitle: 
+subtitle: "Hola"
 summary:
   authors: [Alexander Acosta]
 lastmod: '2024-01-10T16:07:43-04:00'
@@ -243,3 +243,5 @@ summary %>%
 ```
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+
+[Try this app](https://alvarogonzalez.shinyapps.io/ER_injuries/ "injuriesApp")
