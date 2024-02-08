@@ -22,24 +22,25 @@ image:
 projects: []
 ---
 
-![](fotoPilar3.jpg)
 
 ## The data
 
-We're going to explore data from the National Electronic Injury Surveillance System (NEISS), collected by the Consumer Product Safety Commission.
+We’re going to explore data from the National Electronic Injury Surveillance System (NEISS), collected by the Consumer Product Safety Commission.
 
-It's an interesting dataset to explore because every one is already familiar with the domain, and each observation is accompanied by a short narrative that explains how the accident occurred.
+It’s an interesting dataset to explore because every one is already familiar with the domain, and each observation is accompanied by a short narrative that explains how the accident occurred.
 
-``` r
+
+```r
 library(tidyverse)
 ```
 
-``` r
+
+```r
 injuries <- read_tsv("C:/Users/admin/Desktop/R/R-todo/ER_injuries/neiss/injuries.tsv")
 spec(injuries)
 ```
 
-```         
+```
 ## cols(
 ##   trmt_date = col_date(format = ""),
 ##   age = col_double(),
@@ -54,24 +55,26 @@ spec(injuries)
 ## )
 ```
 
-``` r
+
+```r
 products <- read_tsv("C:/Users/admin/Desktop/R/R-todo/ER_injuries/neiss/products.tsv")
 spec(products)
 ```
 
-```         
+```
 ## cols(
 ##   prod_code = col_double(),
 ##   title = col_character()
 ## )
 ```
 
-``` r
+
+```r
 population <- read_tsv("C:/Users/admin/Desktop/R/R-todo/ER_injuries/neiss/population.tsv")
 spec(population)
 ```
 
-```         
+```
 ## cols(
 ##   age = col_double(),
 ##   sex = col_character(),
@@ -81,24 +84,26 @@ spec(population)
 
 ## Exploration
 
-We'll start by looking at a product with an interesting story: 649, "toilets". First, we'll pull out the injuries associated with this product:
+We’ll start by looking at a product with an interesting story: 649, “toilets”. First, we’ll pull out the injuries associated with this product:
 
-``` r
+
+```r
 selected <- injuries %>% filter(prod_code == 649)
 nrow(selected)
 ```
 
-```         
+```
 ## [1] 2993
 ```
 
-Next, we'll perform some basic summaries looking at the location, body part, and diagnosis of toilet-related injuries.
+Next, we’ll perform some basic summaries looking at the location, body part, and diagnosis of toilet-related injuries.
 
-``` r
+
+```r
 selected %>% count(location, wt = weight, sort = TRUE)
 ```
 
-```         
+```
 ## # A tibble: 6 × 2
 ##   location                         n
 ##   <chr>                        <dbl>
@@ -110,11 +115,12 @@ selected %>% count(location, wt = weight, sort = TRUE)
 ## 6 Sports Or Recreation Place    14.8
 ```
 
-``` r
+
+```r
 selected %>% count(body_part, wt = weight, sort = TRUE)
 ```
 
-```         
+```
 ## # A tibble: 24 × 2
 ##    body_part        n
 ##    <chr>        <dbl>
@@ -131,11 +137,12 @@ selected %>% count(body_part, wt = weight, sort = TRUE)
 ## # ℹ 14 more rows
 ```
 
-``` r
+
+```r
 selected %>% count(diag, wt = weight, sort = TRUE)
 ```
 
-```         
+```
 ## # A tibble: 20 × 2
 ##    diag                        n
 ##    <chr>                   <dbl>
@@ -165,13 +172,14 @@ As you might expect, injuries involving toilets most often occur at home. The mo
 
 We can also explore the pattern across age and sex. We have enough data here that a table is not that useful, and so I make a plot, Fig..., that makes the patterns more obvious.
 
-``` r
+
+```r
 summary <- selected %>% 
   count(age, sex, wt = weight)
 summary
 ```
 
-```         
+```
 ## # A tibble: 208 × 3
 ##      age sex          n
 ##    <dbl> <chr>    <dbl>
@@ -188,20 +196,21 @@ summary
 ## # ℹ 198 more rows
 ```
 
-``` r
+```r
 summary %>% 
   ggplot(aes(age, n, colour = sex)) + 
   geom_line() + 
   labs(y = "Estimated number of injuries")
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-1.png" width="672" /\>
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-1.png" width="672" />
 
 We see a spike for young boys peaking at age 3, and then an increase (particularly for women) starting around middle age, and a gradual decline after age 80.
 
 One problem with interpreting this pattern is that we know that there are fewer older people than younger people, so the population available to be injured is smaller. We can control for this by comparing the number of people injured with the total population and calculating an injury rate. Here I use a rate per 10,000.
 
-``` r
+
+```r
 summary <- selected %>% 
   count(age, sex, wt = weight) %>% 
   left_join(population, by = c("age", "sex")) %>% 
@@ -210,7 +219,7 @@ summary <- selected %>%
 summary
 ```
 
-```         
+```
 ## # A tibble: 208 × 5
 ##      age sex          n population   rate
 ##    <dbl> <chr>    <dbl>      <dbl>  <dbl>
@@ -227,13 +236,14 @@ summary
 ## # ℹ 198 more rows
 ```
 
-``` r
+
+```r
 summary %>% 
   ggplot(aes(age, rate, colour = sex)) + 
   geom_line(na.rm = TRUE) + 
   labs(y = "Injuries per 10,000 people")
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-1.png" width="672" /\>
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-1.png" width="672" />
 
 [Try this app](https://alvarogonzalez.shinyapps.io/ER_injuries/ "injuriesApp")

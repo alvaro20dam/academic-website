@@ -22,7 +22,6 @@ image:
 projects: []
 ---
 
-![](fotoPilar3.jpg)
 
 ## The data
 
