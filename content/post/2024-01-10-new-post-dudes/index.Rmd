@@ -1,24 +1,22 @@
 ---
-title: Accidents analysis
-author: Alvaro
-date: '2024-01-10'
-slug: new-post-dudes
-categories:
-  - R
-tags:
-  - plot
+title: "Accidents analysis"
+author: "Alvaro"
+date: "2024-01-10"
+slug: "new-post-dudes"
+categories: R
+tags: plot
 subtitle: "Welcome \U0001F44B We know that first impressions are important, so we've
   populated your new site with some initial content to help you get familiar with
   everything in no time."
 summary: "Welcome \U0001F44B We know that first impressions are important, so we've
   populated your new site with some initial content to help you get familiar with
   everything in no time."
-lastmod: '2024-01-10T16:07:43-04:00'
+lastmod: "2024-01-10T16:07:43-04:00"
 featured: false
 image:
   caption: ''
   focal_point: ''
-  preview_only: no
+  preview_only: false
 projects: []
 ---
 
