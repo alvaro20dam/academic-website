@@ -1,8 +1,8 @@
 ---
-title: Linearregression
+title: Linear Regression
 date: '2025-01-14'
 ---
-```python
+```python {include=FALSE}
 import numpy as np
 
 X = 2 * np.random.rand(100, 1)
