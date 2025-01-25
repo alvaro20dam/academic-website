@@ -2,7 +2,6 @@
 title: Linear Regression
 date: '2025-01-14'
 ---
-[imagen]: notebooks\image\galtton.png "Galtton"
 
 ```python {echo=FALSE}
 import numpy as np
