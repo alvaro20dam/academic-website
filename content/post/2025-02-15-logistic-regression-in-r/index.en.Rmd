@@ -1,22 +1,21 @@
 ---
-title: Logistic Regression in R
-author: Alvaro Gonzalez
-date: '2025-02-15'
-slug: logistic-regression-in-r
-categories:
-  - R
+title: "Logistic Regression in R"
+author: "Alvaro Gonzalez"
+date: "2025-02-15"
+slug: "logistic-regression-in-r"
+categories: R
 tags:
-  - regression
-  - R Markdown
+- regression
+- R Markdown
 subtitle: ''
 summary: ''
 authors: []
-lastmod: '2025-02-15T07:57:20-04:00'
-featured: no
+lastmod: "2025-02-15T07:57:20-04:00"
+featured: false
 image:
   caption: ''
   focal_point: ''
-  preview_only: no
+  preview_only: false
 projects: []
 ---
 
@@ -67,6 +66,20 @@ str(churn_data)
 ```{r}
 summary(churn_data)
 ```
+```{r}
+# Example: Convert contract type to factors
+#churn_data$contract_type <- as.factor(churn_data$contract_type)
+
+# Example: Create dummy variables for contract type (if needed)
+# (Caret package makes this easy)
+dummy_model <- dummyVars(churn ~ ., data = churn_data, fullRank = TRUE)
+churn_data_dummy <- data.frame(predict(dummy_model, newdata = churn_data))
+churn_data_processed <- cbind(churn_data$churn, churn_data_dummy)
+colnames(churn_data_processed)[1] <- "churn"
+churn_data_processed$churn <- as.factor(churn_data_processed$churn)
+```
+
+
 ```{r}
 # Convert variables to a factor (important for logistic regression)
 
