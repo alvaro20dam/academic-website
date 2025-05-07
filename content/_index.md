@@ -256,9 +256,3 @@ sections:
 title: ""
 type: landing
 ---
-
-{{< raw >}}
-{{% portfolio %}}
-  tags = [] # Empty tags list
-{{% /portfolio %}}
-{{< /raw >}}
